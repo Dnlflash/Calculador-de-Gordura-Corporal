@@ -1,0 +1,20 @@
+#Teste Calculador de gordura corporal
+
+nome = input("Qual o seu nome?")
+
+def funcaoinicio():
+    resposta_inicio = input("Vamos medir o seu indice de gordura corporal?",nome)
+        if resposta_inicio.lower() ==("Sim","sim","claro","Claro")
+            perguntas()
+        else:
+            
+        print("é sim ou Sim")
+        funcaoinicio()
+            
+
+def perguntas():
+    altura = input("Qual a sua Altura?")
+    
+    cintura = input('Qual a Circunferencia da sua cintura?')
+    
+    pescoço = input('Qual a Circunferencia do seu pescoço?')
