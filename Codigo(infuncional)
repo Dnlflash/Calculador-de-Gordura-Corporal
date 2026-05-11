@@ -1,20 +1,44 @@
 #Teste Calculador de gordura corporal
 
+import math 
+
 nome = input("Qual o seu nome?")
 
+
+
 def funcaoinicio():
-    resposta_inicio = input("Vamos medir o seu indice de gordura corporal?",nome)
-        if resposta_inicio.lower() ==("Sim","sim","claro","Claro")
-            perguntas()
-        else:
-            
+    resposta_inicio = input(f"Vamos medir o seu indice de gordura corporal {nome}?")
+    if resposta_inicio.lower() in ["Sim","sim","claro","Claro"]:
+        perguntas()
+    else:
         print("é sim ou Sim")
         funcaoinicio()
             
 
+
 def perguntas():
-    altura = input("Qual a sua Altura?")
+    altura = float(
+        input("Qual a sua Altura?")
+        )
     
-    cintura = input('Qual a Circunferencia da sua cintura?')
+    cintura = float(
+        input('Qual a Circunferencia da sua cintura?')
+        )
     
-    pescoço = input('Qual a Circunferencia do seu pescoço?')
+    pescoço = float(
+        input('Qual a Circunferencia do seu pescoço?')
+        )
+    
+    calculodegordura(altura,cintura,pescoço)
+    
+
+
+
+
+
+def calculodegordura(altura,cintura,pescoço):
+    gordura = (86.010 * math.log10(cintura - pescoço) - 70.041 * math.log10(altura) + 36.76)
+    print(f"Sua gorfura corporal é de {gordura}%")
+    
+    
+funcaoinicio()
