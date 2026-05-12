@@ -38,7 +38,7 @@ def perguntas():
 
 def calculodegordura(altura,cintura,pescoço):
     gordura = (86.010 * math.log10(cintura - pescoço) - 70.041 * math.log10(altura) + 36.76)
-    print(f"Sua gorfura corporal é de {gordura}%")
+    print(f"Sua gordura corporal é de {round(gordura,2)}%")
     
     
 funcaoinicio()
