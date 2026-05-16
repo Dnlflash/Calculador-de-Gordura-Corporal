@@ -1,3 +1,4 @@
+
 #Teste Calculador de gordura corporal
 
 import math 
@@ -7,13 +8,19 @@ nome = input("Qual o seu nome?")
 
 
 def funcaoinicio():
-    resposta_inicio = input(f"Vamos medir o seu indice de gordura corporal {nome}?")
-    if resposta_inicio.lower() in ["Sim","sim","claro","Claro"]:
-        perguntas()
-    else:
-        print("é sim ou Sim")
-        funcaoinicio()
-            
+
+    while True:
+
+        resposta_inicio = input(f"Vamos medir o seu indice de gordura corporal {nome}? digite 'sim' para continuar")
+
+        if resposta_inicio.lower() in ["sim","claro",]:
+            perguntas()
+            break
+
+        else:
+            print("é sim ou Sim")
+        
+
 
 
 def perguntas():
@@ -30,8 +37,6 @@ def perguntas():
         )
     
     calculodegordura(altura,cintura,pescoço)
-    
-
 
 
 
@@ -42,3 +47,12 @@ def calculodegordura(altura,cintura,pescoço):
     
     
 funcaoinicio()
+
+
+
+
+
+
+
+
+
